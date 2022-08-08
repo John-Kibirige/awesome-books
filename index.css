@@ -43,6 +43,10 @@ a {
   top: 0;
 }
 
+form ul li {
+  list-style-type: none;
+}
+
 .header li {
   list-style: none;
   margin-right: 41px;
@@ -75,6 +79,7 @@ a {
 .main {
   margin-top: 79px;
 }
+
 .display-date {
   text-align: right;
   margin-right: 30px;
@@ -115,14 +120,12 @@ form {
   margin-block: 8px;
   margin-inline: 10%;
 }
+
 .form-title,
 .disp-title {
   text-align: center;
   font-size: 29px;
   margin-block: 12px;
-}
-form ul li {
-  list-style-type: none;
 }
 
 .add-btn {
@@ -152,7 +155,7 @@ form ul li {
 .book-container button {
   color: var(--txt-color);
   padding: 2px;
-  font-family: Poppins;
+  font-family: var(--font-fam);
   font-weight: 500;
   cursor: pointer;
   box-shadow: 1px 1px 3px black;

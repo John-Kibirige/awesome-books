@@ -27,7 +27,7 @@ const renderFromLocal = () => {
     displayContainer.appendChild(bookContainer);
 
     // second child  that is remove-btn
-    bookContainer.children[1].addEventListener('click', (e) => {
+    bookContainer.children[1].addEventListener('click', () => {
       displayContainer.removeChild(bookContainer);
 
       // update local storage
@@ -50,10 +50,10 @@ window.addEventListener('load', () => {
         link.classList.add('blue');
 
         link.parentElement.nextElementSibling.children[0].classList.remove(
-          'blue'
+          'blue',
         );
         link.parentElement.nextElementSibling.nextElementSibling.children[0].classList.remove(
-          'blue'
+          'blue',
         );
 
         main.innerHTML = '';
@@ -64,10 +64,10 @@ window.addEventListener('load', () => {
       if (id === 'add-new') {
         link.classList.add('blue');
         link.parentElement.previousElementSibling.children[0].classList.remove(
-          'blue'
+          'blue',
         );
         link.parentElement.nextElementSibling.children[0].classList.remove(
-          'blue'
+          'blue',
         );
         main.innerHTML = '';
 
@@ -88,10 +88,11 @@ window.addEventListener('load', () => {
       if (id === 'contact') {
         link.classList.add('blue');
         link.parentElement.previousElementSibling.children[0].classList.remove(
-          'blue'
+          'blue',
         );
-        link.parentElement.previousElementSibling.previousElementSibling.children[0].classList.remove(
-          'blue'
+        const prevSibling = link.parentElement;
+        prevSibling.previousElementSibling.previousElementSibling.children[0].classList.remove(
+          'blue',
         );
         main.innerHTML = '';
 
@@ -99,7 +100,6 @@ window.addEventListener('load', () => {
         contactContainer.classList.add('contact-container');
         contactContainer.innerHTML = generateContact();
         main.appendChild(contactContainer);
-        return;
       }
     });
   });
