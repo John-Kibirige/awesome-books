@@ -3,6 +3,7 @@
   --txt-color: hsl(180, 87%, 12%);
   --odd-color: hsl(240, 0.6%, 30.8%);
   --even-color: hsl(0, 0%, 100%);
+  --font-fam: 'Poppins', sans-serif;
 }
 
 html {
@@ -19,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-fam);
   background-color: var(--bg-color);
 }
 
@@ -87,4 +88,71 @@ a {
 .contact-container .description ul {
   margin-top: 21px;
   margin-left: 38px;
+}
+
+/* form styles  */
+.space-inputs {
+  width: 100%;
+  padding: 10px 4px;
+  font-size: 14.5px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+}
+
+.space-inputs:focus {
+  border: thin solid green;
+  outline: none;
+}
+
+form {
+  margin-block: 8px;
+  margin-inline: 10%;
+}
+.form-title,
+.disp-title {
+  text-align: center;
+  font-size: 29px;
+  margin-block: 12px;
+}
+form ul li {
+  list-style-type: none;
+}
+
+.add-btn {
+  display: block;
+  margin-left: auto;
+  padding: 6px 20px;
+  font-size: 16px;
+  color: var(--txt-color);
+  font-family: var(--font-fam);
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px black;
+}
+
+.book-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--even-color);
+}
+
+.book-container:nth-child(odd) {
+  color: white;
+  background-color: var(--odd-color);
+}
+
+.book-container button {
+  color: var(--txt-color);
+  padding: 2px;
+  font-family: Poppins;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px black;
+}
+
+@media (min-width: 768px) {
+  .book-container button {
+    padding: 4px;
+  }
 }
