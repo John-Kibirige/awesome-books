@@ -1,30 +1,34 @@
 import formatTime from './modules/date.js';
+import generateContact from './modules/contact.js';
+
+const main = document.querySelector('.main-display');
 
 // display time
 const displayDate = document.querySelector('.display-date');
-while (true) {
-  setTimeout(() => {
-    displayDate.innerHTML = formatTime();
-  }, 1000);
-  break;
-}
+displayDate.innerHTML = formatTime();
 
+// Navigation
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach((link) => {
   link.addEventListener('click', ({ target: { id } }) => {
     console.log();
     if (id === 'list') {
-      // remove all others and render list of books
+      main.innerHTML = '';
       return;
     }
 
     if (id === 'add-new') {
-      //   remove all others and render only the form
+      main.innerHTML = '';
       return;
     }
 
     if (id === 'contact') {
-      //   remove all others and render only form
+      main.innerHTML = '';
+
+      const contactContainer = document.createElement('div');
+      contactContainer.classList.add('contact-container');
+      contactContainer.innerHTML = generateContact();
+      main.appendChild(contactContainer);
       return;
     }
   });

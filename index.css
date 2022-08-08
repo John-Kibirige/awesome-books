@@ -23,11 +23,6 @@ body {
   background-color: var(--bg-color);
 }
 
-li {
-  list-style: none;
-  margin-right: 41px;
-}
-
 a {
   text-decoration: none;
   color: hsl(0, 0%, 0%);
@@ -44,6 +39,11 @@ a {
   width: 100%;
   margin-bottom: 24px;
   top: 0;
+}
+
+.header li {
+  list-style: none;
+  margin-right: 41px;
 }
 
 .logo {
@@ -68,6 +68,23 @@ a {
   margin-top: 79px;
 }
 .display-date {
-  margin-left: auto;
-  width: 17%;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.contact-container .contact-title {
+  text-align: center;
+  font-size: 29px;
+  margin-top: 36px;
+}
+
+.contact-container .description {
+  width: 70%;
+  margin-inline: auto;
+  margin-top: 22px;
+}
+
+.contact-container .description ul {
+  margin-top: 21px;
+  margin-left: 38px;
 }
