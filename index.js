@@ -10,46 +10,6 @@ const main = document.querySelector('.main-display');
 const displayDate = document.querySelector('.display-date');
 displayDate.innerHTML = formatTime();
 
-// Navigation
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach((link) => {
-  link.addEventListener('click', ({ target: { id } }) => {
-    console.log();
-    if (id === 'list') {
-      main.innerHTML = '';
-      renderFromLocal();
-      return;
-    }
-
-    if (id === 'add-new') {
-      main.innerHTML = '';
-      const form = document.createElement('form');
-      form.innerHTML = generateForm();
-      main.appendChild(form);
-
-      document.querySelector('.add-btn').addEventListener('click', (e) => {
-        e.preventDefault();
-
-        const title = document.querySelector('#title').value;
-        const author = document.querySelector('#author').value;
-        console.log('the title and author ', title, author);
-        saveToLocal(title, author);
-      });
-      return;
-    }
-
-    if (id === 'contact') {
-      main.innerHTML = '';
-
-      const contactContainer = document.createElement('div');
-      contactContainer.classList.add('contact-container');
-      contactContainer.innerHTML = generateContact();
-      main.appendChild(contactContainer);
-      return;
-    }
-  });
-});
-
 const renderFromLocal = () => {
   const displayContainer = document.createElement('div');
   displayContainer.classList.add('disp-container');
@@ -79,3 +39,68 @@ const renderFromLocal = () => {
 
   main.appendChild(displayContainer);
 };
+
+window.addEventListener('load', () => {
+  renderFromLocal();
+  // Navigation
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach((link) => {
+    link.addEventListener('click', ({ target: { id } }) => {
+      if (id === 'list') {
+        link.classList.add('blue');
+
+        link.parentElement.nextElementSibling.children[0].classList.remove(
+          'blue'
+        );
+        link.parentElement.nextElementSibling.nextElementSibling.children[0].classList.remove(
+          'blue'
+        );
+
+        main.innerHTML = '';
+        renderFromLocal();
+        return;
+      }
+
+      if (id === 'add-new') {
+        link.classList.add('blue');
+        link.parentElement.previousElementSibling.children[0].classList.remove(
+          'blue'
+        );
+        link.parentElement.nextElementSibling.children[0].classList.remove(
+          'blue'
+        );
+        main.innerHTML = '';
+
+        const form = document.createElement('form');
+        form.innerHTML = generateForm();
+        main.appendChild(form);
+
+        document.querySelector('.add-btn').addEventListener('click', (e) => {
+          e.preventDefault();
+
+          const title = document.querySelector('#title').value;
+          const author = document.querySelector('#author').value;
+          saveToLocal(title, author);
+        });
+        return;
+      }
+
+      if (id === 'contact') {
+        link.classList.add('blue');
+        link.parentElement.previousElementSibling.children[0].classList.remove(
+          'blue'
+        );
+        link.parentElement.previousElementSibling.previousElementSibling.children[0].classList.remove(
+          'blue'
+        );
+        main.innerHTML = '';
+
+        const contactContainer = document.createElement('div');
+        contactContainer.classList.add('contact-container');
+        contactContainer.innerHTML = generateContact();
+        main.appendChild(contactContainer);
+        return;
+      }
+    });
+  });
+});

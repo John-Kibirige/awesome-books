@@ -4,6 +4,7 @@
   --odd-color: hsl(240, 0.6%, 30.8%);
   --even-color: hsl(0, 0%, 100%);
   --font-fam: 'Poppins', sans-serif;
+  --light-blue: hsl(240, 100%, 50%);
 }
 
 html {
@@ -45,6 +46,12 @@ a {
 .header li {
   list-style: none;
   margin-right: 41px;
+}
+
+@media (max-width: 768px) {
+  .header li {
+    margin-right: 12px;
+  }
 }
 
 .logo {
@@ -155,4 +162,9 @@ form ul li {
   .book-container button {
     padding: 4px;
   }
+}
+
+.blue {
+  color: var(--light-blue);
+  font-weight: 500;
 }
