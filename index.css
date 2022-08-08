@@ -67,3 +67,7 @@ a {
 .main {
   margin-top: 79px;
 }
+.display-date {
+  margin-left: auto;
+  width: 17%;
+}

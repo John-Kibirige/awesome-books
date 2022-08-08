@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/John-Kibirige/awesome-books/issues"
   },
-  "homepage": "https://github.com/John-Kibirige/awesome-books#readme"
+  "homepage": "https://github.com/John-Kibirige/awesome-books#readme",
+  "dependencies": {
+    "luxon": "^3.0.1"
+  }
 }
