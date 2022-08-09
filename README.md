@@ -9,7 +9,7 @@ A basic website that allows users to add and remove books from a list.
 
 ## Live Demo (if available)
 
-[https://github.com/John-Kibirige/awesome-books/settings/pages](https://github.com/John-Kibirige/awesome-books/settings/pages)
+[https://john-kibirige.github.io/awesome-books/](https://john-kibirige.github.io/awesome-books/)
 
 ## Getting Started
 
