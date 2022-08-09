@@ -193,3 +193,7 @@ form {
   padding: 16px;
   box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.3);
 }
+
+.disp-container {
+  margin-inline: 28px;
+}
