@@ -42,6 +42,7 @@ const renderFromLocal = () => {
 
 window.addEventListener('load', () => {
   renderFromLocal();
+  document.querySelector('.nav-link').classList.add('blue');
   // Navigation
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach((link) => {
