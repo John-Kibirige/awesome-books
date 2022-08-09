@@ -1,4 +1,4 @@
-import { DateTime } from './luxon/src/luxon.js';
+import { DateTime } from './luxon.js';
 
 const dateMonthYear = DateTime.now().toFormat('MMMM dd, yyyy');
 
