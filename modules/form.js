@@ -1,7 +1,7 @@
 /**
  * helper function for creating any input element
  */
-function inputField(id, type, placeHolder = '', clss, value = '') {
+const inputField = (id, type, placeHolder = '', clss, value = '') => {
   const input = document.createElement('input');
   input.setAttribute('id', id);
   input.setAttribute('type', type);
@@ -10,12 +10,12 @@ function inputField(id, type, placeHolder = '', clss, value = '') {
   input.setAttribute('value', value);
 
   return input;
-}
+};
 
 /**
  *Function for creating a form
  */
-function createForm() {
+const createForm = () => {
   const form = document.createElement('form');
   form.id = 'book-form';
   form.setAttribute('action', '#');
@@ -48,7 +48,7 @@ function createForm() {
   liAdd.innerHTML = '<input type="submit" value="Add" class="add-btn" />';
 
   return form.innerHTML;
-}
+};
 
 const generateForm = () => `${createForm()}`;
 export default generateForm;
