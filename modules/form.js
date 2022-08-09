@@ -8,7 +8,6 @@ function inputField(id, type, placeHolder = '', clss, value = '') {
   input.setAttribute('placeholder', placeHolder);
   input.setAttribute('class', clss);
   input.setAttribute('value', value);
-  input.required = true;
 
   return input;
 }
@@ -37,7 +36,14 @@ function createForm() {
   ul.appendChild(liAdd);
 
   liTitle.appendChild(inputField('title', 'text', 'Title', 'space-inputs'));
+  const errorTitle = document.createElement('p');
+  errorTitle.classList.add('error-title');
+  liTitle.appendChild(errorTitle);
+
   liAuthor.appendChild(inputField('author', 'text', 'Author', 'space-inputs'));
+  const errorAuthor = document.createElement('p');
+  errorAuthor.classList.add('error-author');
+  liAuthor.appendChild(errorAuthor);
 
   liAdd.innerHTML = '<input type="submit" value="Add" class="add-btn" />';
 

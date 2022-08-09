@@ -109,6 +109,7 @@ form ul li {
   font-size: 14.5px;
   font-family: 'Poppins', sans-serif;
   margin-bottom: 10px;
+  padding-left: 10px;
 }
 
 .space-inputs:focus {
@@ -170,4 +171,25 @@ form {
 .blue {
   color: var(--light-blue);
   font-weight: 500;
+}
+
+/* error messages */
+.error-title,
+.error-author {
+  font-size: 12px;
+  color: red;
+  margin-left: 14px;
+  margin-top: -6px;
+  margin-bottom: 4px;
+}
+
+/* handle popup */
+.popup {
+  width: 300px;
+  background: #f1d4d4;
+  margin-inline: auto;
+  border-radius: 6px;
+  text-align: center;
+  padding: 16px;
+  box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.3);
 }
