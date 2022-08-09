@@ -54,10 +54,10 @@ window.addEventListener('load', () => {
         link.classList.add('blue');
 
         link.parentElement.nextElementSibling.children[0].classList.remove(
-          'blue'
+          'blue',
         );
         link.parentElement.nextElementSibling.nextElementSibling.children[0].classList.remove(
-          'blue'
+          'blue',
         );
 
         main.innerHTML = '';
@@ -68,10 +68,10 @@ window.addEventListener('load', () => {
       if (id === 'add-new') {
         link.classList.add('blue');
         link.parentElement.previousElementSibling.children[0].classList.remove(
-          'blue'
+          'blue',
         );
         link.parentElement.nextElementSibling.children[0].classList.remove(
-          'blue'
+          'blue',
         );
         main.innerHTML = '';
 
@@ -130,11 +130,11 @@ window.addEventListener('load', () => {
       if (id === 'contact') {
         link.classList.add('blue');
         link.parentElement.previousElementSibling.children[0].classList.remove(
-          'blue'
+          'blue',
         );
         const prevSibling = link.parentElement;
         prevSibling.previousElementSibling.previousElementSibling.children[0].classList.remove(
-          'blue'
+          'blue',
         );
         main.innerHTML = '';
 
