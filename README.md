@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple example steps.
 
 3. run `npm install ` to install all the necessary dependencies including the linters
 
-4. Navigate to the folder called capstone-one and open this project using your editor
+4. Navigate to the folder called awesome-books and open this project using your editor
 
 ### Run tests
 
