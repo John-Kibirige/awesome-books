@@ -1,6 +1,7 @@
 # AwesomeBooks
 
 A basic website that allows users to add and remove books from a list.
+The book app stores all the added books to Local storage so that they can persist when the user closes the app.
 
 ## Built With
 
